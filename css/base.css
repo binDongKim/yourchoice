@@ -11,9 +11,13 @@ section {
     width: 100%;
   }
 
-  .choice-guide {
+  .choice-guide,
+  .extra-info,
+  .thanks
+  {
     font-size: 3.55vw;
   }
+
   u {
     font-size: 4vw;
   }
@@ -34,7 +38,10 @@ section {
     margin: auto;
   }
 
-  .choice-guide {
+  .choice-guide,
+  .extra-info,
+  .thanks
+  {
     font-size: 1.8vw;
   }
 
