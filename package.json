@@ -1,0 +1,27 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "Test users' decision pattern under some circumstances",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "mongoose": "^4.9.2"
+  },
+  "scripts": {
+    "test": "node",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binDongKim/yourchoice.git"
+  },
+  "author": "Dongbin Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/binDongKim/yourchoice/issues"
+  },
+  "homepage": "https://github.com/binDongKim/yourchoice#readme"
+}
