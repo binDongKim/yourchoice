@@ -20,12 +20,12 @@ $(document).ready(function() {
 
 function greenBtns() {
   $('section').data('color', 'green');
-  $('.choice-guide').text('두 버튼 중 더 짙은 초록색 버튼을 클릭해주세요.');
+  $('.choice-guide').html('두 버튼 중 <u>더 짙은 초록색</u> 버튼을 클릭해주세요.');
   $('button').removeClass('red').addClass('green');
 }
 
 function blueBtns() {
   $('section').data('color', 'blue');
-  $('.choice-guide').text('두 버튼 중 더 파란 버튼을 클릭해주세요.');
+  $('.choice-guide').html('두 버튼 중 <u>더 파란 버튼</u>을 클릭해주세요.');
   $('button').removeClass('green').addClass('blue');
 }

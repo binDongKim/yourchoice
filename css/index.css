@@ -14,8 +14,11 @@ section {
   .choice-guide {
     font-size: 3.55vw;
   }
-
+  u {
+    font-size: 4vw;
+  }
   .btn {
+    font-size: 3vw;
     width: 30vw;
     height: 30vw !important;
   }
@@ -32,10 +35,15 @@ section {
   }
 
   .choice-guide {
+    font-size: 1.8vw;
+  }
+
+  u {
     font-size: 2vw;
   }
 
   .btn {
+    font-size: 3vw !important;
     width: 23vw;
     height: 23vw !important;
   }
