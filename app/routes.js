@@ -8,7 +8,7 @@ module.exports = function(app) {
   });
 
   app.post('/choice', function(req, res) {
-    var choice; // user's choice
+    var choice = req.body.choice;
     var userChoice = new Choice();
     userChoice.choice = choice;
     userChoice.save().then(function() {
