@@ -14,7 +14,7 @@ $(document).ready(function() {
 
   var userCase = testType === 'c' ? cCase : popCase(currentCases);
   console.log('첫번째: ' + userCase);
-  manipulateNumber(userCase, 3500);
+  manipulateNumber(userCase, 3000);
 
   $('button').click(function() {
     var userChoice = $(this).data('choice');
