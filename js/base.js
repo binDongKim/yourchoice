@@ -7,12 +7,11 @@ $(document).ready(function() {
     var currentSectionColor = $('section').data('color');
     switch (currentSectionColor) {
       case 'red':
-        greenBtns();
-        manipulateResult(currentTestCase, 2000);
-        manipulateResult(currentTestCase, 3500);
+        greenBtns(currentTestCase);
+        manipulateResult(currentTestCase, 2500);
         break;
       case 'green':
-        blueBtns();
+        blueBtns(currentTestCase);
         manipulateResult(currentTestCase, 3000);
         break;
       case 'blue':
@@ -30,6 +29,7 @@ function manipulateResult(testCase, msLater) {
     2,5일땐 첫번째 button value+1
     3,6일땐 두번째 button value+1
   */
+
   var index = (caseNum+1)%3;
   if(index !== 2) {
     var targetButton = $('button:eq(' + index + ')');
@@ -40,14 +40,42 @@ function manipulateResult(testCase, msLater) {
   }
 }
 
-function greenBtns() {
+function greenBtns(testCase) {
   $('section').data('color', 'green');
   $('.choice-guide').html('두 버튼 중 <u>더 짙은 초록색</u> 버튼을 클릭해주세요.');
   $('button').removeClass('red').addClass('green');
+  switch (testCase) {
+    case 'case1':
+    case 'case2':
+    case 'case3':
+      $('button:eq(0)').text(91);
+      $('button:eq(1)').text(20);
+      break;
+    case 'case4':
+    case 'case5':
+    case 'case6':
+      $('button:eq(0)').text(50);
+      $('button:eq(1)').text(47);
+      break;
+  }
 }
 
-function blueBtns() {
+function blueBtns(testCase) {
   $('section').data('color', 'blue');
   $('.choice-guide').html('두 버튼 중 <u>더 파란</u> 버튼을 클릭해주세요.');
   $('button').removeClass('green').addClass('blue');
+  switch (testCase) {
+    case 'case1':
+    case 'case2':
+    case 'case3':
+      $('button:eq(0)').text(83);
+      $('button:eq(1)').text(28);
+      break;
+    case 'case4':
+    case 'case5':
+    case 'case6':
+      $('button:eq(0)').text(54);
+      $('button:eq(1)').text(43);
+      break;
+  }
 }
