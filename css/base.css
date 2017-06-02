@@ -21,8 +21,13 @@ section {
   u {
     font-size: 4vw;
   }
+
+  button.num-btn {
+    font-size: 5vw !important;
+  }
+
   .btn {
-    font-size: 3vw;
+    font-size: 3vw !important;
     width: 30vw;
     height: 30vw !important;
   }
