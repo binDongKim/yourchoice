@@ -3,40 +3,28 @@ var path = require('path');
 
 module.exports = function(app) {
 
-  app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, '../views', 'base.html'));
+
+  // Type A: 다른 사람들이 선택한 결과 표시 o, 큰 격차
+  app.get('/cupcake', function(req, res) {
+    res.sendFile(path.join(__dirname, '../views', 'type-a.html'));
   });
 
-  app.get('/case1', function(req, res) {
-    res.sendFile(path.join(__dirname, '../views', 'case1.html'));
+  // Type B: 다른 사람들이 선택한 결과 표시 o, 적은 격차
+  app.get('/donut', function(req, res) {
+    res.sendFile(path.join(__dirname, '../views', 'type-b.html'));
   });
 
-  app.get('/case2', function(req, res) {
-    res.sendFile(path.join(__dirname, '../views', 'case2.html'));
-  });
-
-  app.get('/case3', function(req, res) {
-    res.sendFile(path.join(__dirname, '../views', 'case3.html'));
-  });
-
-  app.get('/case4', function(req, res) {
-    res.sendFile(path.join(__dirname, '../views', 'case4.html'));
-  });
-
-  app.get('/case5', function(req, res) {
-    res.sendFile(path.join(__dirname, '../views', 'case5.html'));
-  });
-
-  app.get('/case6', function(req, res) {
-    res.sendFile(path.join(__dirname, '../views', 'case6.html'));
+  // Type C: 다른 사람들이 선택한 결과 표시 x
+  app.get('/honeycomb', function(req, res) {
+    res.sendFile(path.join(__dirname, '../views', 'type-c.html'));
   });
 
   app.post('/choice', function(req, res) {
-    var testCase = req.body.testCase;
+    var userCase = req.body.userCase;
     var choice   = req.body.choice;
 
     var userChoice      = new Choice();
-    userChoice.testCase = testCase;
+    userChoice.userCase = userCase;
     userChoice.choice   = choice;
     userChoice.save().then(function() {
       res.send('Success');
