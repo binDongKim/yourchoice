@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var choiceSchema = mongoose.Schema({
-  testCase: String,
+  userCase: String,
   choice  : String
 });
 
