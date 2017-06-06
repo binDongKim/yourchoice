@@ -19,6 +19,15 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, '../views', 'type-c.html'));
   });
 
+  app.get('/result', function(req, res) {
+    var userCase = req.query.userCase;
+    var userChoice = req.query.userChoice;
+    Choice.find({userCase: userCase, choice: userChoice}).count().then(function(choices) {
+      console.log(choices);
+      res.sendStatus(200);
+    });
+  });
+
   app.post('/choice', function(req, res) {
     var userCase = req.body.userCase;
     var choice   = req.body.choice;

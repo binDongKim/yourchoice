@@ -18,6 +18,7 @@ $(document).ready(function() {
 
   $('button').click(function() {
     var userChoice = $(this).data('choice');
+    console.log(userChoice);
     var currentSectionColor = $('section').data('color');
     switch (currentSectionColor) {
       case 'red':
